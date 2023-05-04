@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-black">
+<div class="contianer">
+    <div class="w-50 py-5 text-white m-auto ">
+        <h1 class="fs-3">product management system</h1>
+        <div class="form-group mb-3 ">
+            <label for="productName" class="mb-2">productName</label>
+            <input id="productName" oninput="validproductname()" type="text" class="form-control" placeholder="enter product Name ">
+            <p class="text-danger d-none" id="wrongname" >invalid name</p>
+
+        </div>
+        <div class="form-group mb-3 ">
+            <label for="productPrice" class="mb-2">product Price</label>
+            <input id="productPrice" oninput="validproductprice()" type="number" class="form-control" placeholder="enter product price ">
+            <p class="text-danger d-none" id="wrongprice" >invalid price</p>
+
+
+        </div>   
+        <div class="form-group mb-3 ">
+            <label for="productmodel" class="mb-2">product model</label>
+            <input id="productmodel" oninput="validmodel()" type="text" class="form-control" placeholder="enter product model ">
+            <p class="text-danger d-none" id="wrongmodel" >invalid model</p>
+
+
+        </div>  
+         <div class="form-group mb-3 ">
+            <label for="productdes" class="mb-2">product description</label>
+            <textarea name="productdes" oninput="validdesc()" id="productdes"  class="form-control" placeholder="enter product description " ></textarea>
+            <p class="text-danger d-none" id="wrongdesc" >short description</p>
+
+
+        </div>  
+    <button onclick=" addproduct()" id="addproductbtn" class="btn btn-primary btn-lg" >add product</button>
+    <button onclick="setupdateproduct()" class="btn btn-warning d-none btn-lg" id="updateproductbtn" >update product</button>
+    </div>
+    <div class=" w-50 py-5 text-white m-auto ">
+        <h4>search ...</h4>
+<input type="text" oninput="searchByName(this.value)" class="form-control search">
+    </div>
+    <table class="table text-white text-center w-75 mx-auto">
+        <thead >
+            <th>index</th>
+            <th>productname</th>
+            <th>productprice</th>
+            <th>productmodel</th>
+            <th>productdesc</th>
+            <th>update</th>
+            <th>delete</th>
+        </thead>
+        <tbody id="tbody">
+            
+
+        </tbody>
+    </table>
+</div>
+
+    <script src="js/index.js"></script>
+</body>
+</html>
